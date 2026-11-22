@@ -3,7 +3,7 @@ services:
     image: postgres:16-alpine
     environment:
       POSTGRES_USER: vidyut
-      POSTGRES_PASSWORD: vidyut
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Database password required}
       POSTGRES_DB: vidyut
     ports:
       - "5433:5432"
